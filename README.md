@@ -4,7 +4,7 @@
 
 This task involves containerizing a simple Node.js web application using Docker. The steps include creating a Dockerfile to build the Docker image, deploying it with Docker Compose, testing the application, and pushing the Docker image to a registry (DockerHub).
 
-Tools Required
+# Tools Required
 
 Before starting, make sure you have the following tools installed:
 
@@ -18,14 +18,14 @@ Docker: Platform to create and run containers (Download Docker)
 
 # Steps to Dockerize the Application
 
-1. Install Docker
+# 1. Install Docker
 
 After installing Docker, you can verify it’s working by running the following command in your terminal:
 
 docker --version
 
 
-2. Clone the Sample Web Application
+# 2. Clone the Sample Web Application
 
 You can either:
 
@@ -42,7 +42,7 @@ cd your-repository
 If you are starting a new project, follow the steps to create index.js, package.json, and Dockerize the app.
 
 
-3. Create a Dockerfile
+# 3. Create a Dockerfile
 
 In the root of your project, create a file named Dockerfile (no file extension). Add the following content:
 
@@ -83,7 +83,7 @@ Exposes port 8080 (the app’s listening port).
 Runs the application with npm start.
 
 
-4. Build the Docker Image
+# 4. Build the Docker Image
 
 Once your Dockerfile is in place, build the Docker image by running the following command in your terminal:
 
@@ -95,7 +95,7 @@ After the build completes, verify that the image was created:
 docker images
 
 
-5. Create a Docker Compose File
+# 5. Create a Docker Compose File
 
 In the project folder, create a docker-compose.yml file with the following content:
 
@@ -112,7 +112,7 @@ Defines the web service, which will build the Docker image.
 Maps the container’s port 8080 to port 49160 on the host machine.
 
 
-6. Start the Docker Compose Environment
+# 6. Start the Docker Compose Environment
 
 Run the following command to start the app using Docker Compose:
 
@@ -123,7 +123,7 @@ This will build and run the container, and you can access the app by navigating 
 http://localhost:49160
 
 
-7. Test the Application
+# 7. Test the Application
 
 Open your browser and go to:
 
@@ -131,7 +131,7 @@ http://localhost:49160
 You should see the message: Hello from Dockerized Node.js App!
 
 
-8. Push the Docker Image to DockerHub
+# 8. Push the Docker Image to DockerHub
 
 Login to DockerHub:
 Run the following command to log in to DockerHub:
