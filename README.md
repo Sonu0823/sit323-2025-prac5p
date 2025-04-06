@@ -1,6 +1,6 @@
-SIT323/SIT737: Cloud Native Application Development - Task 5.1P
+# SIT323/SIT737: Cloud Native Application Development - Task 5.1P
 
-Overview
+#Overview
 
 This task involves containerizing a simple Node.js web application using Docker. The steps include creating a Dockerfile to build the Docker image, deploying it with Docker Compose, testing the application, and pushing the Docker image to a registry (DockerHub).
 
@@ -16,7 +16,7 @@ Node.js: JavaScript runtime (Download Node.js)
 
 Docker: Platform to create and run containers (Download Docker)
 
-Steps to Dockerize the Application
+# Steps to Dockerize the Application
 
 1. Install Docker
 
@@ -48,24 +48,24 @@ In the root of your project, create a file named Dockerfile (no file extension).
 
 dockerfile
 
-# Use Node.js image from DockerHub
+ Use Node.js image from DockerHub
 FROM node:18
 
-# Set the working directory inside the container
+ Set the working directory inside the container
 WORKDIR /app
 
-# Copy package files and install dependencies
+Copy package files and install dependencies
 COPY package*.json ./
 
 RUN npm install
 
-# Copy the rest of the application code
+Copy the rest of the application code
 COPY . .
 
-# Expose port 8080 (port your app listens on)
+Expose port 8080 (port your app listens on)
 EXPOSE 8080
 
-# Start the application
+Start the application
 CMD ["npm", "start"]
 
 This Dockerfile performs the following actions:
