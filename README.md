@@ -1,6 +1,6 @@
 # SIT323/SIT737: Cloud Native Application Development - Task 5.1P
 
-#Overview
+# Overview
 
 This task involves containerizing a simple Node.js web application using Docker. The steps include creating a Dockerfile to build the Docker image, deploying it with Docker Compose, testing the application, and pushing the Docker image to a registry (DockerHub).
 
